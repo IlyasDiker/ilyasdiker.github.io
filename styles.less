@@ -1,0 +1,88 @@
+@import url(//db.onlinewebfonts.com/c/1c45e28f8e86cc89876f003b953cc3e9?family=SF+Pro+Text);
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: SfProText , sans-serif;
+}
+
+.headtopnav{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+.logo{
+    width: 120px;
+    margin: 20px auto;
+}
+
+.panelsholder{
+    margin-top: 50px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+
+.panel{
+    display: inline-flex;
+    color: white;
+    text-align: center;
+    align-items: center;
+    .txtcnt{
+        text-align: center;
+        margin: 0 auto;
+    }
+    width: 490px;
+    height: 490px;
+    margin: 10px auto;
+    h1{
+        font-size: 50px;
+        font-weight: bold;
+    }
+    h5{
+        font-size: 20px;
+    }
+}
+
+.panel:hover{
+    transform: scale(1.03);
+    transition: transform 1s;
+}
+
+.pro{
+    background-image: url("imgs/programing.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.personal{
+    background-image: url("imgs/maroc.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+@media only screen and (max-width: 990px) {
+
+    .panelsholder {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        width: max-content;
+        margin-top: 20px;
+    }
+
+    .panel{
+        display: flex;
+        width: 100vw;
+        height: 35vh;
+        margin: 5px 0px;
+    }
+
+}
