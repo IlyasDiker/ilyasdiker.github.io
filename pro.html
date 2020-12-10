@@ -5,8 +5,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="//cdn.jsdelivr.net/npm/less" ></script>
@@ -56,18 +58,90 @@
                     I'm currently Looking for new a opportunity & working on my project <a>Art of Kars</a></p>
                 <br>
                 <div class="inline">
-                    <vs-button flat :active="active == 1" @click="active = 1">
-                        <p2>Hire Me</p2>
-                    </vs-button>
-                    <vs-button flat :active="active == 0" @click="active = 0">
+                    <a href="mailto:ilyasbenhssine@gmail.com?subject=Hey,%20we%20want%20to%20hire%20you&body=Serious%20inquiries%20only,%20Plz">
+                        <vs-button flat :active="active == 1" @click="active = 1">
+                            <p2>Hire Me</p2>
+                        </vs-button>
+                    </a>
+                        
+                    <a href="#mywork"><vs-button flat :active="active == 0" @click="active = 0">
                         <p2>My Work</p2>
-                    </vs-button>
+                    </vs-button></a>
+                    
                 </div>
             </section>
         </div>
-        <section class="sec-content">
+        <section class="sec-content" id="mywork">
             <div class="container">
                 <h2>My Work</h2>
+                <br>
+                <div class="grid">
+                    <div class="card">
+                        <img class="pic" src="https://i.imgur.com/3Yaz223.png" alt="">
+                        <div class="desc">
+                            <h3>Art of Kars</h3>
+                            <p>The Art ok Kars is the luxury marketplace to find new and preowned luxury, exotic and classic cars for sale.
+                            </p>
+                            <h2 class="inline">
+                                <span class="mdi mdi-vuejs"></span>
+                                <span class="mdi mdi-firebase"></span>
+                                <span class="mdi mdi-language-python"></span>
+                            </h2><br>
+                            <vs-button @click="" disabled>
+                                Under Construction
+                            </vs-button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="pic" src="https://i.imgur.com/7wwFL5u.png" alt="">
+                        <div class="desc">
+                            <h3>medERP</h3>
+                            <p>MedERP is a medical ERP desktop application you can use to manage emloyees - clients - appointments - invoices - etc...
+                            </p>
+                            <h2 class="inline">
+                                <span class="mdi mdi-language-java"></span>
+                                <span class="mdi mdi-database"></span>
+                                <span class="mdi mdi-apple"></span>
+                                <span class="mdi mdi-microsoft-windows"></span>
+                            </h2><br>
+                            <a href="https://github.com/IlyasDiker/medERP">
+                                <vs-button @click="">
+                                    Visite project website
+                                </vs-button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="pic" src="https://i.imgur.com/Riud7BG.png" alt="">
+                        <div class="desc">
+                            <h3>Blabler</h3>
+                            <p>Blabler is a micro-blogging platform from breaking news and entertainment to sports and politics.
+                            </p>
+                            <h2 class="inline">
+                                <span class="mdi mdi-language-python"></span>
+                                <span class="mdi mdi-vuejs"></span>
+                                <span class="mdi mdi-database"></span>
+                            </h2><br>
+                            <a href="https://github.com/Blabler">
+                                <vs-button @click="">
+                                    Visite project website
+                                </vs-button>
+                            </a>
+                        </div>
+                    </div>
+                    <center>
+                        <br>
+                        <a href="https://github.com/IlyasDiker?tab=repositories">
+                            <vs-button animation-type="vertical">
+                                More on my Github
+                                <template #animate >
+                                    <span class="mdi mdi-github"></span>
+                                </template>
+                              </vs-button>
+                        </a>
+                    </center>
+                </div>
             </div>
         </section>
         
