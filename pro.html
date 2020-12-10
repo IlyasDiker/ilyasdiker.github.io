@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="//cdn.jsdelivr.net/npm/less" ></script>
+    <title>Ilyas Benhssine | Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body class="darken" vs-theme="dark">
+    
+    <div id="app">
+        <div class="container">
+            <div class="navbar box">
+                <a href="index.html"><img src="imgs/logo-w.png" alt="" width="50px"></a>
+                <div class="inline">
+                    <a href="https://github.com/IlyasDiker">
+                        <vs-button icon color="tumblr" href="">
+                            <i class='bx bxl-github'></i>
+                        </vs-button>
+                    </a>
+                    <a href="https://ilyasbenhssine.medium.com/">
+                        <vs-button icon color="medium" >
+                            <i class='bx bxl-medium'></i>
+                        </vs-button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ilyasbenhssine/">
+                        <vs-button icon color="linkedin" >
+                            <i class='bx bxl-linkedin'></i>
+                        </vs-button>
+                    </a>
+                    <a href="https://www.instagram.com/ilyaslezwin/">
+                        <vs-button icon color="dribbble" >
+                            <i class='bx bxl-instagram'></i>
+                        </vs-button>
+                    </a>
+                    <a href="mailto:ilyasbenhssine@gmail.com">
+                        <vs-button icon color="google-plus" >
+                            <i class='bx bx-paper-plane' style='color:#ffffff'  ></i>
+                        </vs-button>
+                    </a>
+                </div>
+            </div>
+            <!--  BODY START  -->
+            <section class="center vh-70">
+                <h1>Ilyas Benhssine</h1>
+                <br>
+                <p>Hello i am a Full Stack developer & Software Engineering Student from Rabat, Morocco<br>
+                    I enjoy building everything from small business sites to rich interactive apps. <br>
+                    I'm currently Looking for new a opportunity & working on my project <a>Art of Kars</a></p>
+                <br>
+                <div class="inline">
+                    <vs-button flat :active="active == 1" @click="active = 1">
+                        <p2>Hire Me</p2>
+                    </vs-button>
+                    <vs-button flat :active="active == 0" @click="active = 0">
+                        <p2>My Work</p2>
+                    </vs-button>
+                </div>
+            </section>
+        </div>
+        <section class="sec-content">
+            <div class="container">
+                <h2>My Work</h2>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
