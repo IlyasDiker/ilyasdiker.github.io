@@ -6,7 +6,7 @@
 
 h1{font-size: 50px;}
 p2{font-size: 17px;}
-
+a{text-decoration: none;}
 body{
     background-color:#141417;
     color: white;
@@ -17,10 +17,48 @@ body{
     margin: 10px auto;
 }
 
+@media only screen and (max-width: 910px) {
+    .container{
+        width: 90vw;
+    }
+    .card{
+        margin: 20px auto !important;
+        flex-direction: column;
+        width: 80vw;
+        .pic{
+            object-fit: cover;
+            width: 80vw !important;
+            height: 250px;
+        }
+    }
+}
+
 .box{
     background-color: #1e2023;
     box-shadow: 0 20px 35px -10px rgba(var(--vs-dark),.2);
     border-radius: 20px;
+}
+
+.card{
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,var(--vs-shadow-opacity));
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 200ms ease-in;
+    margin: 20px;
+    display: flex;
+    .desc{
+        margin: 25px;
+    }
+    p{
+        margin: 20px 0px;
+    }
+    .pic{
+        border-radius: 20px;
+        width: 290px;
+    }
+}
+.card:hover{
+    transform: scale(1.01);
 }
 
 .inline{
