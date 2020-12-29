@@ -3,36 +3,74 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ilyas Benhssine</title>
-    <link rel="stylesheet/less" type="text/css" href="styles.less" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css" rel="stylesheet">
+    <!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"-->
+    <link rel="stylesheet/less" type="text/css" href="index.less" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
     <script src="//cdn.jsdelivr.net/npm/less"></script>
     <link rel="icon" href="imgs/logo-w.png">
 </head>
 
 <body>
-    <div class="headtopnav">
-        <img class="logo" src="imgs/logo.png">
-    </div>
-    <div class="panelsholder mx-auto">
-        <a href="pro.html">
-            <div class="panel pro">
-                <div class="txtcnt">
-                    <h1>Professional</h1>
-                    <h5>Learn the rules like a pro</h5>
-                </div>
+    <div id="app">
+        <div class="mainholder">
+            
+            <img class="profilepic" src="https://avatars3.githubusercontent.com/u/28260951?s=460&u=03dc4c84c11831b3c35a725b3f9065a23c0fdbda&v=4" alt="" width="170px">
+            
+            <h2>Ilyas Benhssine</h2>
+            <p class="description">Hello i am a Full Stack developer & Software Engineering Student from Rabat, Morocco<br>
+                I enjoy building everything from small business sites to rich interactive apps.<br>
+                I'm currently Looking for new a opportunity & working on my project Art of Kars</p>
+            <div class="align-horizontal-grid">
+                <a class="clickable-box" href="pro.html">
+                    <span class="mdi mdi-briefcase-outline icon"></span>
+                    <div>
+                        <h4>Professional</h4>
+                        <p>Learn rules like a pro</p>
+                    </div>
+                </a>
+                <a class="clickable-box" href="unv.html">
+                    <span class="mdi mdi-fingerprint icon"></span>
+                    <div>
+                        <h4>Personal</h4>
+                        <p>So you can break them<br>like an artist</p>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="unv.html">
-            <div class="panel personal">
-                <div class="txtcnt">
-                    <h1>Personal</h1>
-                    <h5>So you can break them <br>like an artist</h5>
-                </div>
+            
+            <h3 style="align-self: flex-start; padding: 25px 0px;">Socials</h3>
+            
+            <div class="align-horizontal iconbox-holder">
+                <a class="icon-box github" href="https://github.com/IlyasDiker">
+                    <span class="mdi mdi-github"></span>
+                    <p>Github</p>
+                </a>
+                <a class="icon-box linkedin" href="https://www.linkedin.com/in/ilyasbenhssine/">
+                    <span class="mdi mdi-linkedin"></span>
+                    <p>Linked In</p>
+                </a>
+                <a class="icon-box instagram" href="https://www.instagram.com/ilyaslezwin/">
+                    <span class="mdi mdi-instagram"></span>
+                    <p>Instagram</p>
+                </a>
+                <a class="icon-box facebook" href="https://www.facebook.com/ilyas.Benhssine/">
+                    <span class="mdi mdi-facebook"></span>
+                    <p>Facebook</p>
+                </a>
             </div>
-        </a>
-    </div>
+        </div>
+    </div>   
 
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script>
+    <script>
+      new Vue({
+        el: '#app'
+      })
+    </script>
 </body>
+
 </html>
