@@ -9,7 +9,8 @@ new Vue({
         active: 1,
         collapseOnScroll: true,
         dialogactive: 0,
-        options: [],
+        ddyslexia: false,
+        dcolorblind: false,
     },
     methods: {
 

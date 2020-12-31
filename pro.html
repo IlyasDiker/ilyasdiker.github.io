@@ -18,7 +18,7 @@
 </head>
 <body class="darken" vs-theme="dark">
     
-    <div id="app">
+    <div id="app" v-bind:class="{ dyslexia: ddyslexia }">
         <div class="container">
             <div class="navbar box">
                 <a href="index.html"><img src="imgs/logo-w.png" alt="" width="50px"></a>
@@ -48,6 +48,9 @@
                             <i class='bx bx-paper-plane' style='color:#ffffff'  ></i>
                         </vs-button>
                     </a>
+                    <vs-button icon @click="dialogactive=!dialogactive">
+                        <i class="bx bx-accessibility"></i>
+                    </vs-button> 
                 </div>
             </div>
             <!--  BODY START  -->
@@ -75,42 +78,43 @@
                 </div>
             </section>
         </div>
-        <vs-dialog blur v-model="dialogactive" width="500px" prevent-close>
+        <vs-dialog blur v-model="dialogactive" width="400px">
             <template #header>
               <h4 class="not-margin">
-                Enhance Your Experience
+                Disability Friendly
               </h4>
             </template>
             <div class="con-content not-margin">
-                <b>Do you have any Disabilities ?</b>
+                <br>
                 <div class=" con-checkbox">
-                    <vs-checkbox val="html" v-model="options" >
+                    <vs-checkbox val="Dyslexia" v-model="ddyslexia" >
                       Dyslexia
                     </vs-checkbox>
-                    <vs-checkbox val="css" v-model="options">
-                      Color blind
+                    <p>Color Blind</p>
+                    <vs-checkbox val="ColorBlind" v-model="dcolorblind" disabled>
+                      Red-Green
                     </vs-checkbox>
-                    <vs-checkbox val="javascript" v-model="options">
-                      I'm a Human Ressource manager
+                    <vs-checkbox val="ColorBlind" v-model="dcolorblind" disabled>
+                        Blue-Yellow
                     </vs-checkbox>
-              
+                    <vs-checkbox val="ColorBlind" v-model="dcolorblind" disabled>
+                        Monochromacy (Sensitive to light)
+                    </vs-checkbox>
                 </div>
             </div>
-            <template #footer>
+            <!-- <template #footer>
                 <div class="footer-dialog">
                   <vs-button block>
                     Continue
                   </vs-button>
                 </div>
-              </template>
+              </template> -->
         </vs-dialog>
         <!-- <section class="sec-content" id="experience">
             <div class="container">
                 <h2>Services</h2>
                 <br>
-                <vs-button @click="dialogactive=!active">
-                    active
-                </vs-button> 
+
             </div>
         </section> -->
         <section class="sec-content" id="mywork">
