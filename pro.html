@@ -51,7 +51,7 @@
                 </div>
             </div>
             <!--  BODY START  -->
-            <section class="center vh-70">
+            <section class="center vh-70" id="intro">
                 <vs-avatar circle badge badge-color="success" size="100">
 					<img src="https://avatars3.githubusercontent.com/u/28260951?s=460&u=03dc4c84c11831b3c35a725b3f9065a23c0fdbda&v=4" alt="">
 				  </vs-avatar>
@@ -75,6 +75,44 @@
                 </div>
             </section>
         </div>
+        <vs-dialog blur v-model="dialogactive" width="500px" prevent-close>
+            <template #header>
+              <h4 class="not-margin">
+                Enhance Your Experience
+              </h4>
+            </template>
+            <div class="con-content not-margin">
+                <b>Do you have any Disabilities ?</b>
+                <div class=" con-checkbox">
+                    <vs-checkbox val="html" v-model="options" >
+                      Dyslexia
+                    </vs-checkbox>
+                    <vs-checkbox val="css" v-model="options">
+                      Color blind
+                    </vs-checkbox>
+                    <vs-checkbox val="javascript" v-model="options">
+                      I'm a Human Ressource manager
+                    </vs-checkbox>
+              
+                </div>
+            </div>
+            <template #footer>
+                <div class="footer-dialog">
+                  <vs-button block>
+                    Continue
+                  </vs-button>
+                </div>
+              </template>
+        </vs-dialog>
+        <section class="sec-content" id="experience">
+            <div class="container">
+                <h2>Services</h2>
+                <br>
+                <!-- <vs-button @click="dialogactive=!active">
+                    active
+                </vs-button> -->
+            </div>
+        </section>
         <section class="sec-content" id="mywork">
             <div class="container">
                 <h2>My Work</h2>
@@ -215,14 +253,35 @@
                               </vs-button>
                         </a>
                     </center>
+                    <a class="float-btn" onclick="topFunction()" id="topBtn"><i class="bx bx-chevron-up"></i></a>
                 </div>
+                <br>
+                <center>© Copyright 2021 - Ilyas Benhssine</center>
             </div>
         </section>
-        
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script>
     <script src="app.js"></script>
+    <script>
+    var mybutton = document.getElementById("topBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

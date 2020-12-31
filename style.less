@@ -4,6 +4,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@font-face{
+	font-family: "opendyslexic";
+	src: url('https://github.com/antijingoist/web-accessibility/blob/master/fonts/OpenDyslexic-Regular.otf');
+	font-style: normal;
+	font-weight: normal;
+}
+
+
 h1{font-size: 50px;}
 p2{font-size: 17px;}
 a{text-decoration: none;}
@@ -105,4 +113,22 @@ html {
 .sec-content{
     background-color: #1e2023;
     padding: 20px;
+}
+
+.float-btn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 20px;
+    padding: 12px 16px;
+    right: 20px;
+    color: white;
+    background: rgba(19, 20, 22, 0.4);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 35px -10px rgba(var(--vs-dark),.2);
+    border-radius: 20px;
+}
+.float-btn:hover{
+    background: rgba(12, 12, 14, 0.8);
 }
