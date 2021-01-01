@@ -17,9 +17,8 @@ p2{font-size: 17px;}
 a{text-decoration: none;}
 
 body{
-    // background-color:#141417;
 
-    background: url("https://i.imgur.com/0azzi7a.jpg");
+    background: url("https://i.imgur.com/0azzi7a.jpg") !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,6 +33,12 @@ html {
 .container{
     width: 900px;
     margin: 10px auto;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
 }
 
 @media only screen and (max-width: 910px) {
@@ -131,4 +136,18 @@ html {
 }
 .float-btn:hover{
     background: rgba(12, 12, 14, 0.8);
+}
+
+.service{
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,var(--vs-shadow-opacity));
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 200ms ease-in;
+    h3{
+        padding: 15px 0px;
+    }
+}
+.service:hover{
+    transform: scale(1.05);
+    background-color: rgba(26, 91, 255, 0.829);
 }
