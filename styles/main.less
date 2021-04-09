@@ -19,14 +19,60 @@
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     // font-family: 'IBM Plex Mono', monospace;
+
+    
 }
 
 body{
     background: #0F1011;
+    
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: transparent !important; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 3px;
+        margin: 1px 0px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
 }
 
 html {
     scroll-behavior: smooth;
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #242424; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 3px;
+        margin: 1px 0px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
 }
 
 @size-1: 8px;
@@ -70,16 +116,19 @@ h5{font-size: 24px;}
     flex-direction: row;
     align-items: center;
     z-index: 999;
+    overflow-x: auto;
     background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
     a{
         text-decoration: none;
     }
     .nav-item{
+        white-space: nowrap;
+        flex-wrap: nowrap;
         width: fit-content;
         color: white;
         font-size: 15px;
         height: 20px;
-        margin-right: 5px;
+        margin: 5px;
         padding: 16px 10px;
         
         display: flex;
@@ -92,6 +141,26 @@ h5{font-size: 24px;}
         transition: 0.2s ease-in-out;
         &:hover{
             background: rgba(12, 179, 148, 0.7);
+        }
+    }
+    .close-btn{
+        display: none;
+    }
+    &.responsive{
+        background: rgb(20, 20, 20);
+        flex-wrap: wrap;
+        border-radius: 0px 0px 20px 20px;
+        z-index: 1000;
+        .close-btn{
+            display: block !important;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding-top: 30px;
+            &:hover{
+                cursor: pointer;
+                color: rgb(12, 179, 148);
+            }
         }
     }
 }
@@ -129,20 +198,46 @@ h5{font-size: 24px;}
     right: 0px;
     bottom: 0px;
     padding: @size-3;
-
-    .notif{
-        background: rgba(255, 255, 255, 0.3);
+    width: 348px;
+    display: flex;
+    flex-direction: column;
+    .gototop{
+        background: rgba(255, 255, 255, 0.2);
+        padding: @size-2;
+        margin-bottom: 5px;
         color: white;
-        width: 300px;
+        border-radius: 10px;
+        width: fit-content;
+        float: right;
+        &:hover{
+            background: rgba(12, 179, 148, 0.7);
+        }
+    }
+    .notif{
+        font-family: 'IBM Plex mono', monospace;
+        &>*{
+            font-family: 'IBM Plex mono', monospace;
+        }
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        width: 100%;
         padding: @size-2;
         margin-bottom: 5px;
         backdrop-filter: blur(20px);
         border-radius: 10px;
 
+        &:hover{
+            background: rgba(255, 255, 255, 0.2);
+        }
         &.white{
             background: white;
             color: black;
         }
-        
+
+        .ntf-icon{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
     }
 }

@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar">
+        <nav class="navbar" id="main-navbar">
             <a id="nav-logo" href="#hero">
                 <div class="nav-item"><img src="imgs/ss-logo-w.png" alt="" width="20px" height="20px"></div>
             </a>
@@ -25,13 +25,19 @@
             <a href="#technologies"><div class="nav-item">Technologies</div></a>
             <a href="https://github.com/IlyasDiker"><div class="nav-item"><i class='bx bxl-github'></i>&nbsp; Github</div></a>
             <a href="https://www.linkedin.com/in/ilyasbenhssine/"><div class="nav-item"><i class='bx bxl-linkedin-square'></i>&nbsp; LinkedIn</div></a>
+
+            <div class="close-btn" onclick="closenav()">CLOSE</div>
         </nav>
+        <nav class="navbar responsive-btn" id="responsive-btn" onclick="opennav()">
+            <div class="nav-item"><i class='bx bx-menu-alt-left' ></i>&nbsp; Menu</div>
+        </nav>
+
         <section id="hero" class="sec-hero">
             <h1>Ilyas Benhssine</h1>
             <p class="heading my-5">Full Stack Web Developer</p>
             <a href="#list" class="stealth-link"><p class="mono">SCROLL DOWN FOR MORE <i class='bx bx-mouse' ></i></p></a>
         </section>
-        <section id="list" class="sec-list p-5" style="background: gray;">
+        <section id="list" class="sec-list p-5" style="background: rgb(34, 34, 34);">
             <section id="about" class="card">
                 test
             </section>
@@ -40,18 +46,44 @@
             </section>
         </section>
 
-        <div class="notif-wrapper">
-            <div class="notif white">test</div>
-            <div class="grid-2">
-                <div class="notif show-onscroll" id='test'>test</div>
-                <div class="notif show-onscroll" id='test'>test</div>
-            </div>
-            <div class="notif show-onscroll" id='test'>test</div>
-        </div>
 
+        <div class="notif-wrapper">
+            <a href="#" class="steath-link show-onscroll">
+                <div class="gototop">
+                    <i class='bx bx-arrow-to-top' ></i>
+                </div>
+            </a>
+            <a href="mailto:ilyasbenhssine@gmail.com" class="stealth-link">
+                <div class="notif white">
+                    <p>SHOW INTEREST<br>IN WORKING WITH ME</p>
+                    <div class="ntf-icon">
+                        <i class='bx bx-mail-send' ></i>
+                    </div>
+                </div>
+            </a>
+            <div class="grid-2">
+                <div class="notif show-onscroll" id='test'>
+                    <p>MY CV</p>
+                    <div class="ntf-icon">
+                        <i class='bx bx-paperclip' ></i>
+                    </div>
+                </div>
+                <div class="notif show-onscroll" id='test'>
+                    <p>CONFIG</p>
+                    <div class="ntf-icon">
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="notif show-onscroll" id='test'>
+                <p>ESTIMATE YOUR PROJECT</p>
+                <p>PRICING CALCULATOR</p>
+                <div class="ntf-icon">
+                    <i class='bx bx-calculator' ></i>
+                </div></div>
+        </div>
     </div>
 
-    
     <script src="libs/jquery-3.6.0.js"></script>
     <script src="libs/vue.js"></script>
     <script src="app.js"></script>
