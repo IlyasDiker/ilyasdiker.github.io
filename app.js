@@ -36,8 +36,6 @@ $(window).resize(function() {
 
 
 $(window).on('scroll', function() {
-
-
     if($(window).scrollTop()){
         $('#nav-logo').show('slow');
         $('.show-onscroll').slideDown();
