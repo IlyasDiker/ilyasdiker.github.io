@@ -25,3 +25,17 @@ new Vue({
 
 
 //.show-onscroll
+
+$('#nav-logo').hide();
+$('.show-onscroll').slideUp();
+
+
+$(window).on('scroll', function() {
+    if($(window).scrollTop()){
+        $('#nav-logo').show('slow');
+        $('.show-onscroll').slideDown();
+    }else{
+        $('#nav-logo').hide('slow');
+        $('.show-onscroll').slideUp();
+    }
+});
