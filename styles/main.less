@@ -1,0 +1,310 @@
+// -------------------------------------------------------------- //
+//                                       ::::::::::: :::::::::    //
+//                                          :+:     :+:    :+:    //
+//    By: Ilyas Benhssine                  +:+     +:+    +:+     //
+//                                        +#+     +#++:++#+       //
+//                                       +#+     +#+    +#+       //
+//    ilyasbenhssine@gmail.com          #+#     #+#    #+#        //
+//                                 ########### #########          //
+// -------------------------------------------------------------- //
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    // font-family: 'IBM Plex Mono', monospace;
+
+    
+}
+
+body{
+    background: #0F1011;
+    
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: transparent !important; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 3px;
+        margin: 1px 0px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #242424; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 3px;
+        margin: 1px 0px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+}
+
+@size-1: 8px;
+@size-2: 16px;
+@size-3: 24px;
+@size-4: 32px;
+@size-5: 48px;
+@size-6: 64px;
+@size-7: 80px;
+@size-8: 96px;
+
+h1{font-size: 54px;}
+h2{font-size: 48px;}
+h3{font-size: 42px;}
+h4{font-size: 32px;}
+h5{font-size: 24px;}
+
+.level-1{z-index: 1;}
+.level-2{z-index: 2;}
+
+.mono{
+    letter-spacing: 0.08em;
+    font-weight: 300;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+////////// --- NAVBAR
+
+.stealth-link{
+    text-decoration: none;
+    color: inherit;
+    &:visited{
+        color: inherit;
+    }
+}
+
+.navbar{
+    padding: @size-4;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 999;
+    overflow-x: auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,0)));background: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+    a{
+        text-decoration: none;
+    }
+    .nav-item{
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        width: fit-content;
+        color: white;
+        font-size: 15px;
+        height: 20px;
+        margin: 5px;
+        padding: 16px 10px;
+        
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        
+        background: rgba(44, 45, 48, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+        transition: 0.2s ease-in-out;
+        &:hover{
+            background: rgba(12, 179, 148, 0.7);
+        }
+    }
+    .close-btn{
+        display: none;
+        cursor: pointer;
+    }
+    &.responsive{
+        background: rgb(20, 20, 20);
+        flex-wrap: wrap;
+        border-radius: 0px 0px 20px 20px;
+        z-index: 1000;
+        .close-btn{
+            display: block !important;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding-top: 30px;
+            &:hover{
+                cursor: pointer;
+                color: rgb(12, 179, 148);
+            }
+        }
+    }
+}
+
+.sec-hero{
+    min-height: fit-content;
+    height: calc(100vh);
+    padding: @size-5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    //background-color: #0F1011;
+    color: white;
+
+    background: url('../imgs/wallpaper.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .heading{
+        font-size: 3rem;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 250px;
+        z-index: 0;
+        background: linear-gradient(0deg, rgb(15, 16, 17) 0%, rgba(16, 17, 18, 0.71) 31.25%, rgba(15, 16, 17, 0) 100%);
+    }
+}
+
+.notif-wrapper{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding: @size-3;
+    width: 348px;
+    display: flex;
+    flex-direction: column;
+    z-index: 800;
+    .notif{
+        font-family: 'IBM Plex mono', monospace;
+        &>*{
+            font-family: 'IBM Plex mono', monospace;
+        }
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        width: 100%;
+        padding: @size-2;
+        margin-bottom: 5px;
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+
+        &:hover{
+            background: rgba(255, 255, 255, 0.2);
+        }
+        &.white{
+            background: white;
+            color: black;
+        }
+        &.small{
+            width: fit-content !important;
+            align-self: flex-end;
+        }
+        .ntf-icon{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+    .close-btn{
+        display: none;
+        cursor: pointer;
+    }
+    &.responsive{
+        background: rgb(20, 20, 20);
+        border-radius: 20px 20px 0px 0px;
+        z-index: 1000;
+        width: 100% !important;
+        .close-btn{
+            display: block !important;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.sec-list{
+    background: #0F1011;
+    .card{
+        padding: @size-3;
+        width: calc(100% * 0.75);
+        min-width: 800px;
+        position: relative;
+        margin-bottom: @size-4;
+
+        border-radius: 5px;
+        background: black;
+        color: white;
+        padding-bottom: @size-7;
+        transition: 0.2s ease-in-out;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+        border: 1px solid transparent;
+
+        @media (max-width: 900px) {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        &:hover{
+            transform: scale(1.01);
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+            border: 0.5px solid #0f0f0f;
+        }
+        h5{
+            font-weight: 500;
+            margin-bottom: @size-1;
+        }
+        p{
+            font-weight: 300;
+            font-size: 20px;
+        }
+        .card-footer{
+            position: absolute;
+            bottom: @size-3;
+            left: @size-3;
+            width: calc(100% - (@size-3 * 2) );
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}
