@@ -26,9 +26,9 @@
             <a href="https://github.com/IlyasDiker"><div class="nav-item"><i class='bx bxl-github'></i>&nbsp; Github</div></a>
             <a href="https://www.linkedin.com/in/ilyasbenhssine/"><div class="nav-item"><i class='bx bxl-linkedin-square'></i>&nbsp; LinkedIn</div></a>
 
-            <div class="close-btn" onclick="closenav()">CLOSE</div>
+            <div class="close-btn" onclick="closeElement('#main-navbar')">CLOSE</div>
         </nav>
-        <nav class="navbar responsive-btn" id="responsive-btn" onclick="opennav()">
+        <nav class="navbar responsive-btn" id="responsive-btn" onclick="openElement('#main-navbar')">
             <div class="nav-item"><i class='bx bx-menu-alt-left' ></i>&nbsp; Menu</div>
         </nav>
 
@@ -83,13 +83,12 @@
         </section>
 
         <!-- NOTIFICATIONS -->
-
-        <div class="notif-wrapper">
-            <!-- <a href="#" class="steath-link show-onscroll">
-                <div class="gototop">
-                    <i class='bx bx-arrow-to-top' ></i>
-                </div>
-            </a> -->
+        <div class="notif-wrapper" id="ntf-responsive-wrapper">
+            <div class="notif white small" id="ntf-responsive-btn" onclick="SwitchElements('#notif-list', '#ntf-responsive-wrapper')">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+            </div>
+        </div>
+        <div class="notif-wrapper" id="notif-list">
             <a href="mailto:ilyasbenhssine@gmail.com" class="stealth-link">
                 <div class="notif white">
                     <p>SHOW INTEREST<br>IN WORKING WITH ME</p>
@@ -117,7 +116,15 @@
                 <p>PRICING CALCULATOR</p>
                 <div class="ntf-icon">
                     <i class='bx bx-calculator' ></i>
-                </div></div>
+                </div>
+            </div>
+            <div class="close-btn notif small" onclick="SwitchElements('#ntf-responsive-wrapper', '#notif-list');">
+                <i class='bx bx-x'></i>
+            </div>
+        </div>
+
+        <div class="loader" id="loader">
+            <img src="imgs/loading-fast.gif" alt="Loading" width="50px">
         </div>
     </div>
 

@@ -148,6 +148,7 @@ h5{font-size: 24px;}
     }
     .close-btn{
         display: none;
+        cursor: pointer;
     }
     &.responsive{
         background: rgb(20, 20, 20);
@@ -209,18 +210,6 @@ h5{font-size: 24px;}
     display: flex;
     flex-direction: column;
     z-index: 800;
-    .gototop{
-        background: rgba(255, 255, 255, 0.2);
-        padding: @size-2;
-        margin-bottom: 5px;
-        color: white;
-        border-radius: 10px;
-        width: fit-content;
-        float: right;
-        &:hover{
-            background: rgba(12, 179, 148, 0.7);
-        }
-    }
     .notif{
         font-family: 'IBM Plex mono', monospace;
         &>*{
@@ -241,11 +230,30 @@ h5{font-size: 24px;}
             background: white;
             color: black;
         }
-
+        &.small{
+            width: fit-content !important;
+            align-self: flex-end;
+        }
         .ntf-icon{
             position: absolute;
             right: 10px;
             bottom: 10px;
+        }
+    }
+    .close-btn{
+        display: none;
+        cursor: pointer;
+    }
+    &.responsive{
+        background: rgb(20, 20, 20);
+        border-radius: 20px 20px 0px 0px;
+        z-index: 1000;
+        width: 100% !important;
+        .close-btn{
+            display: block !important;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 }

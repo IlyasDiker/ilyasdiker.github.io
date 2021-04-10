@@ -26,9 +26,14 @@ new Vue({
 
 //.show-onscroll
 
-$('#nav-logo').hide();
-$('.show-onscroll').slideUp();
-responsive();
+$(window).on('load', function() {
+    $('#nav-logo').hide();
+    $('.show-onscroll').slideUp();
+    responsive();
+    $('#loader').fadeOut('slow');
+});
+
+
 
 $(window).resize(function() {
     responsive();
@@ -45,20 +50,29 @@ $(window).on('scroll', function() {
     }
 });
 
-function closenav() {
-    $('#main-navbar').slideUp();
+function closeElement(e) {
+    $(e).slideUp();
 }
-function opennav() {
-    $('#main-navbar').slideDown();
+function openElement(e) {
+    $(e).slideDown();
+}
+
+function SwitchElements(open, close){
+    $(open).slideDown();
+    $(close).slideUp();
 }
 
 function responsive() {
     if($(window).width() < 700) {
         $('#main-navbar').slideUp('fast').addClass('responsive');
         $('#responsive-btn').slideDown();
+        $('#ntf-responsive-wrapper').slideDown('fast');
+        $('#notif-list').slideUp().addClass('responsive');
     } else{
         $('#main-navbar').removeClass('responsive');
         $('#main-navbar').slideDown();
         $('#responsive-btn').slideUp();
+        $('#ntf-responsive-wrapper').slideUp();
+        $('#notif-list').slideDown().removeClass('responsive');
     }
 }
