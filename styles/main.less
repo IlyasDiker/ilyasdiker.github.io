@@ -98,6 +98,9 @@ h5{font-size: 24px;}
     font-weight: 300;
     font-family: 'IBM Plex Mono', monospace;
 }
+.t-white{
+    color: white;
+}
 
 ////////// --- NAVBAR
 
@@ -284,6 +287,9 @@ h5{font-size: 24px;}
         box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
         border: 1px solid transparent;
 
+        background-position: center;
+        background-size: cover;
+
         @media (max-width: 900px) {
             width: 100%;
             min-width: 100%;
@@ -317,6 +323,30 @@ h5{font-size: 24px;}
             i{
                 font-size: 20px;
             }
+        }
+            
+    }
+}
+
+.link-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    a{
+        text-decoration: none;
+        white-space: nowrap;
+        width: fit-content;
+        color: white;
+        font-size: 12px;
+        margin: 5px;
+        padding: 10px 10px;
+        text-transform: uppercase;
+        background: rgba(44, 45, 48, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+        transition: 0.2s ease-in-out;
+        &:hover{
+            background: rgba(12, 179, 148, 0.7);
         }
     }
 }
