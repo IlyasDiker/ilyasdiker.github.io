@@ -133,6 +133,7 @@ h5{font-size: 24px;}
         height: 20px;
         margin: 5px;
         padding: 16px 10px;
+        cursor: pointer;
         
         display: flex;
         align-items: center;
@@ -161,6 +162,7 @@ h5{font-size: 24px;}
             width: 100%;
             text-align: center;
             padding-top: 30px;
+            cursor: pointer;
             &:hover{
                 cursor: pointer;
                 color: rgb(12, 179, 148);
@@ -171,7 +173,7 @@ h5{font-size: 24px;}
 
 .sec-hero{
     min-height: fit-content;
-    height: calc(100vh);
+    height: 100vh;
     padding: @size-5;
 
     display: flex;
@@ -211,6 +213,7 @@ h5{font-size: 24px;}
     flex-direction: column;
     z-index: 800;
     .notif{
+        cursor: pointer;
         font-family: 'IBM Plex mono', monospace;
         &>*{
             font-family: 'IBM Plex mono', monospace;
@@ -260,6 +263,12 @@ h5{font-size: 24px;}
 
 .sec-list{
     background: #0F1011;
+    padding: @size-5;
+    transition: 0.2s ease-in-out;
+    @media (max-width: 900px) {
+        padding: @size-2;
+    }
+    
     .card{
         padding: @size-3;
         width: calc(100% * 0.75);
