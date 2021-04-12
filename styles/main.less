@@ -101,6 +101,9 @@ h5{font-size: 24px;}
 .t-white{
     color: white;
 }
+.footer-text{
+    font-size: 12px;
+}
 
 ////////// --- NAVBAR
 
@@ -121,7 +124,7 @@ h5{font-size: 24px;}
     display: flex;
     flex-direction: row;
     align-items: center;
-    z-index: 999;
+    z-index: 100;
     overflow-x: auto;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,0)));background: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
     a{
@@ -158,7 +161,7 @@ h5{font-size: 24px;}
         background: rgb(20, 20, 20);
         flex-wrap: wrap;
         border-radius: 0px 0px 20px 20px;
-        z-index: 1000;
+        z-index: 150;
         .close-btn{
             display: block !important;
             color: white;
@@ -217,7 +220,7 @@ h5{font-size: 24px;}
     width: 348px;
     display: flex;
     flex-direction: column;
-    z-index: 800;
+    z-index: 125;
     .notif{
         cursor: pointer;
         font-family: 'IBM Plex mono', monospace;
@@ -257,7 +260,7 @@ h5{font-size: 24px;}
     &.responsive{
         background: rgb(20, 20, 20);
         border-radius: 20px 20px 0px 0px;
-        z-index: 1000;
+        z-index: 150;
         width: 100% !important;
         .close-btn{
             display: block !important;
@@ -352,6 +355,33 @@ h5{font-size: 24px;}
         transition: 0.2s ease-in-out;
         &:hover{
             background: rgba(12, 179, 148, 0.7);
+        }
+    }
+}
+
+.modal-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.76);
+    z-index: 200;
+    display: flex;
+    flex-direction: row-reverse;
+    .modal{
+        background: white;
+        color: black;
+        width: 900px;
+        min-width: 900px;
+        padding: @size-4;
+        overflow-x: scroll;
+        @media (max-width: 900px) {
+            min-width: 100%;
+            padding: @size-2;
+        }
+        .paragraph{
+            padding-left: 15%;
         }
     }
 }

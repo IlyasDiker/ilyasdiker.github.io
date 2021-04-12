@@ -31,8 +31,12 @@ $(window).on('load', function() {
     $('.show-onscroll').slideUp();
     responsive();
     $('#loader').fadeOut('slow');
+    $('#modal').fadeOut();
 });
 
+$('#modal').on('click', function(e) {
+    closeModal(e);
+});
 
 
 $(window).resize(function() {
@@ -74,5 +78,14 @@ function responsive() {
         $('#responsive-btn').slideUp();
         $('#ntf-responsive-wrapper').slideUp();
         $('#notif-list').slideDown().removeClass('responsive');
+    }
+}
+
+function closeModal(e) {
+    if (e.target !== $('.modal-wrapper')) {
+        $('#modal').fadeOut();
+    } else {
+        alert('2');
+        return;
     }
 }
