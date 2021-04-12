@@ -231,6 +231,7 @@ h5{font-size: 24px;}
         margin-bottom: 5px;
         backdrop-filter: blur(20px);
         border-radius: 10px;
+        position: relative;
 
         &:hover{
             background: rgba(255, 255, 255, 0.2);
@@ -283,15 +284,16 @@ h5{font-size: 24px;}
         margin-bottom: @size-4;
 
         border-radius: 5px;
-        background: black;
+        background: #0F1011;
         color: white;
         padding-bottom: @size-7;
         transition: 0.2s ease-in-out;
         box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
         border: 1px solid transparent;
 
-        background-position: center;
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
         @media (max-width: 900px) {
             width: 100%;
@@ -301,7 +303,7 @@ h5{font-size: 24px;}
         &:hover{
             transform: scale(1.01);
             box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
-            border: 0.5px solid #0f0f0f;
+            border: 0.5px solid #1a1a1a;
         }
         h5{
             font-weight: 500;
