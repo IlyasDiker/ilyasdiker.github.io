@@ -28,14 +28,11 @@ new Vue({
 
 $(window).on('load', function() {
     $('#nav-logo').hide();
+    $('#modal').hide();
     $('.show-onscroll').slideUp();
     responsive();
     $('#loader').fadeOut('slow');
-    $('#modal').fadeOut();
-});
-
-$('#modal').on('click', function(e) {
-    closeModal(e);
+    
 });
 
 
@@ -81,11 +78,10 @@ function responsive() {
     }
 }
 
-function closeModal(e) {
-    if (e.target !== $('.modal-wrapper')) {
-        $('#modal').fadeOut();
-    } else {
-        alert('2');
-        return;
-    }
+function openModal() {
+    $('#modal').animate({width:'toggle'},1000);
+}
+
+function closeModal() {
+    $('#modal').animate({width:'toggle'},350);
 }

@@ -368,12 +368,13 @@ h5{font-size: 24px;}
     height: 100vh;
     background: rgba(0, 0, 0, 0.76);
     z-index: 200;
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    //flex-direction: row-reverse;
+    grid-template-columns: 1fr 900px;
     .modal{
         background: white;
         color: black;
-        width: 900px;
+        //width: 900px;
         min-width: 900px;
         padding: @size-4;
         overflow-x: scroll;
@@ -384,5 +385,11 @@ h5{font-size: 24px;}
         .paragraph{
             padding-left: 15%;
         }
+    }
+    .modal_quit{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        cursor: url('../imgs/leave_cursor.png'), auto;
     }
 }
