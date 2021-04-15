@@ -80,8 +80,10 @@ function responsive() {
 
 function openModal() {
     $('#modal').animate({width:'toggle'},1000);
+    $('body').addClass('lock-scroll');
 }
 
 function closeModal() {
     $('#modal').animate({width:'toggle'},350);
+    $('body').removeClass('lock-scroll');
 }
