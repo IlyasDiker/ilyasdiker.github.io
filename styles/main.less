@@ -371,6 +371,9 @@ h5{font-size: 24px;}
     display: grid;
     //flex-direction: row-reverse;
     grid-template-columns: 1fr 900px;
+    @media (max-width: 900px) {
+        grid-template-columns: 100%;
+    }
     .modal{
         background: white;
         color: black;
