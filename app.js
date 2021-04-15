@@ -9,32 +9,34 @@
 // -------------------------------------------------------------- //
 
 
-new Vue({
-    el: '#app',
-    bodyAttrs: {
+// new Vue({
+//     el: '#app',
+//     bodyAttrs: {
 
-    },
-    data: {
-        APP_NAME: "Ilyas Benhssine Portfolio",
+//     },
+//     data: {
+//         APP_NAME: "Ilyas Benhssine Portfolio",
 
-    },
-    methods: {
+//     },
+//     methods: {
 
-    }
-})
+//     }
+// })
 
 
 //.show-onscroll
+$('.modal-wrapper').hide();
 
 $(window).on('load', function() {
     $('#nav-logo').hide();
-    $('#modal').hide();
     $('.show-onscroll').slideUp();
     responsive();
-    $('#loader').fadeOut('slow');
-    
+    removeloader();
 });
 
+function removeloader(){
+    $('#loader').delay(350).fadeOut('slow');
+}
 
 $(window).resize(function() {
     responsive();
@@ -78,12 +80,13 @@ function responsive() {
     }
 }
 
-function openModal() {
-    $('#modal').animate({width:'toggle'},1000);
+function openModal(modal_id) {
+    console.log(modal_id);
+    $(modal_id).animate({width:'toggle'},500);
     $('body').addClass('lock-scroll');
 }
 
-function closeModal() {
-    $('#modal').animate({width:'toggle'},350);
+function closeModal(modal_id) {
+    $(modal_id).animate({width:'toggle'},350);
     $('body').removeClass('lock-scroll');
 }
