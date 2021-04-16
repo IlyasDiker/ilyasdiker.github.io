@@ -1,0 +1,107 @@
+<!-- 
+// -------------------------------------------------------------- //
+//                                       ::::::::::: :::::::::    //
+//                                          :+:     :+:    :+:    //
+//    By: Ilyas Benhssine                  +:+     +:+    +:+     //
+//                                        +#+     +#++:++#+       //
+//                                       +#+     +#+    +#+       //
+//    ilyasbenhssine@gmail.com          #+#     #+#    #+#        //
+//                                 ########### #########          //
+// -------------------------------------------------------------- // 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilyas Benhssine</title>
+    <link rel="stylesheet/less" type="text/css" href="styles/main.less">
+    <link rel="stylesheet/less" type="text/css" href="styles/components.less">
+    <link rel="stylesheet/less" type="text/css" href="styles/spacing.less">
+    
+    <link rel="shortcut icon" href="imgs/ss-logo-w.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="libs/less.js"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar light" id="main-navbar">
+            <a id="nav-logo2" href="indexv3.html">
+                <div class="nav-item"><img src="imgs/s-logo-b.png" alt="" width="20px" height="20px"></div>
+            </a>
+            <a href="#aboutme"><div class="nav-item">About me</div></a>
+
+            <div class="close-btn" onclick="closeElement('#main-navbar')">CLOSE</div>
+        </nav>
+        <nav class="navbar responsive-btn" id="responsive-btn">
+            <div class="nav-item" onclick="openElement('#main-navbar')"><i class='bx bx-menu-alt-left' ></i>&nbsp; Menu</div>
+        </nav>
+
+        <!-- SECTIONS -->
+        <section class="sec-main py-5" id="calcul">
+            
+        </section>
+
+        <section id="list" class="sec-list">
+            <div class="t-white mt-1 mb-1 pt-4">
+                <p class="mono">FOLLOW ME</p>
+                <div class="link-list mt-3">
+                    <a href="https://www.instagram.com/ilyaslezwin/">Instagram &nbsp;<i class='bx bx-link-external'></i></a>
+                    <a href="https://www.facebook.com/ilyas.Benhssine/">Facebook &nbsp;<i class='bx bx-link-external'></i></a>
+                    <a href="https://www.linkedin.com/in/ilyasbenhssine/">LinkedIn &nbsp;<i class='bx bx-link-external'></i></a>
+                    <a href="https://www.youtube.com/channel/UCMhxDrwqhVJftFy8YQAbzqA">Youtube &nbsp;<i class='bx bx-link-external'></i></a>
+                    <a href="mailto:ilyasbenhssine@gmail.com">Mail</a>
+                </div>
+                <p class="mono mt-5 footer-text">© Copyright 2021 - Ilyas Benhssine</p>
+            </div>
+        </section>
+
+        <!-- NOTIFICATIONS -->
+        <div class="notif-wrapper" id="ntf-responsive-wrapper">
+            <div class="notif white small" id="ntf-responsive-btn" onclick="SwitchElements('#notif-list', '#ntf-responsive-wrapper')">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+            </div>
+        </div>
+        <div class="notif-wrapper" id="notif-list">
+            <a href="mailto:ilyasbenhssine@gmail.com" class="stealth-link">
+                <div class="notif white">
+                    <p>SHOW INTEREST<br>IN WORKING WITH ME</p>
+                    <div class="ntf-icon">
+                        <i class='bx bx-mail-send' ></i>
+                    </div>
+                </div>
+            </a>
+            <div class="grid-2">
+                <a href="/files/cv_IlyasBenhssine.pdf" class="stealth-link">
+                    <div class="notif show-onscroll" id='test'>
+                        <p>MY CV</p>
+                        <div class="ntf-icon">
+                            <i class='bx bx-paperclip' ></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="notif show-onscroll disabled" id='test'>
+                    <p>EOA</p>
+                    <div class="ntf-icon">
+                        <i class='bx bx-handicap' ></i>
+                    </div>
+                </div>
+            </div>
+            <div class="close-btn notif small" onclick="SwitchElements('#ntf-responsive-wrapper', '#notif-list');">
+                <i class='bx bx-x'></i>
+            </div>
+        </div>
+
+
+        <div class="loader" id="loader">
+            <img src="imgs/loading-fast.gif" alt="Loading" width="50px">
+        </div>
+    </div>
+
+    <script src="libs/jquery-3.6.0.js"></script>
+    <!-- <script src="libs/vue.js"></script> -->
+    <script src="app.js" defer></script>
+</body>
+</html>

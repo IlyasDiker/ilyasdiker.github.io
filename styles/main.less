@@ -131,6 +131,15 @@ h5{font-size: 24px;}
     a{
         text-decoration: none;
     }
+    &.light{
+        .nav-item{
+            background: rgba(206, 206, 206, 0.88);
+            color: black;
+            &:hover{
+                background: rgba(173, 173, 173, 0.88);
+            }
+        }
+    }
     .nav-item{
         white-space: nowrap;
         flex-wrap: nowrap;
@@ -211,6 +220,13 @@ h5{font-size: 24px;}
         z-index: 0;
         background: linear-gradient(0deg, rgb(15, 16, 17) 0%, rgba(16, 17, 18, 0.71) 31.25%, rgba(15, 16, 17, 0) 100%);
     }
+}
+
+.sec-main{
+    background: white;
+
+    height: fit-content;
+    min-height: 100vh;
 }
 
 .notif-wrapper{
