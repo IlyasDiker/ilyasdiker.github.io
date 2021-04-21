@@ -374,6 +374,15 @@ h5{font-size: 24px;}
     }
 }
 
+.sec-main{
+    .container{
+        padding: @size-6 @size-6;
+        @media (max-width: 940px) {
+            padding: @size-6 @size-2;
+        }
+    }
+}
+
 .link-list{
     display: flex;
     flex-direction: row;
@@ -478,5 +487,27 @@ h5{font-size: 24px;}
         &:hover{
             background: rgb(211, 211, 211);
         }
+    }
+}
+
+.xl-block-btn{
+    width: 100%;
+    border: none;
+    padding: @size-4;
+    background-color: rgba(12, 179, 148, 1);
+    color: white;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    i{
+        font-size: 25px;
+    }
+    &:hover{
+        background-color: darken(rgba(12, 179, 148, 1), 5%);
     }
 }
