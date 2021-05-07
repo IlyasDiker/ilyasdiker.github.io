@@ -49,22 +49,37 @@
                     <div class="align-row my-2">
                         <div>
                             <label for="p-1">1-10</label>
-                            <input id="p-1" type="radio" name="numpages" value="1-10">
+                            <input id="p-1" type="radio" name="numpages" value="1000" v-model="PageNum">
                         </div>
                         <div>
                             <label for="p-2">10-20</label>
-                            <input id="p-2" type="radio" name="numpages" value="10-20">
+                            <input id="p-2" type="radio" name="numpages" value="2000" v-model="PageNum">
                         </div>
                         <div>
                             <label for="p-3">20-30</label>
-                            <input id="p-4" type="radio" name="numpages" value="20-30">
+                            <input id="p-4" type="radio" name="numpages" value="3000" v-model="PageNum">
                         </div>
                     </div>
-                    
 
+                    <p class="mini-title">Number of Pages</p>
+                    <div class="align-row my-2">
+                        <div>
+                            <label for="p-1">1-10</label>
+                            <input id="p-1" type="radio" name="numpages" value="1000" v-model="PageTest">
+                        </div>
+                        <div>
+                            <label for="p-2">10-20</label>
+                            <input id="p-2" type="radio" name="numpages" value="2000" v-model="PageTest">
+                        </div>
+                        <div>
+                            <label for="p-3">20-30</label>
+                            <input id="p-4" type="radio" name="numpages" value="3000" v-model="PageTest">
+                        </div>
+                    </div>
                 </div>
+                <p>Total price is {{ total_price }}</p>
             </div>
-            <div class="xl-block-btn mono">Estimate Your Project<i class='bx bx-right-arrow-alt'></i></div>
+            <div class="xl-block-btn mono" @click="$emit('calculate')">Estimate Your Project<i class='bx bx-right-arrow-alt'></i></div>
         </section>
 
         <section id="list" class="sec-list">
@@ -124,7 +139,8 @@
     </div>
 
     <script src="libs/jquery-3.6.0.js"></script>
-    <!-- <script src="libs/vue.js"></script> -->
+    <script src="libs/vue.js"></script>
     <script src="app.js" defer></script>
+    <script src="calculator.js" defer></script>
 </body>
 </html>
